@@ -18,7 +18,7 @@ export const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi I'm Setha Vathanak
+          Hi, I'm Eang Haysan
         </motion.h1>
 
         <div className="flex flex-col items-start">
@@ -63,7 +63,7 @@ export const HeroText = () => {
             animate="visible"
             transition={{ delay: 1 }}
         >
-          Hi, I'm Setha Vathanak
+          Hi, I'm Eang Haysan
         </motion.p>
         <div>
           <motion.p className="text-5xl font-black text-neutral-300"

@@ -20,7 +20,7 @@ function Navigation({ onNavigate }) {
         </li>
         <li className="nav-li">
             <a className="nav-link" href="#projects" onClick={onNavigate}>
-                Project
+                Projects
             </a>
         </li>
         <li className="nav-li">
@@ -38,7 +38,7 @@ export const Navbar = () => {
         <div className="mx-auto c-space max-w-7xl">
             <div className="flex items-center justify-between py-2 sm:py-0">
                 <a className="text-xl font-bold transition-colors text-neutral-400 hover:text-white">
-                    Setha Vathanak
+                    Eang Haysan
                 </a>
                 <button onClick={() => setIsOpen(!isOpen)} className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden">
                     <img src={isOpen ? "assets/close.svg" : "assets/menu.svg"} className="w-6 h-6" alt="toggle"/>

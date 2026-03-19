@@ -36,7 +36,7 @@ const Contact = () => {
       //   {
       //     from_name: formData.name,
       //     name: formData.name,
-      //     to_name: "Setha Vathanak",
+      //     to_name: "Eang Haysan",
       //   //   from_email: formData.email,
       //     reply_to: formData.email,
       //     message: formData.message,
@@ -59,7 +59,7 @@ const Contact = () => {
     } catch (error) {
       setIsLoading(false);
       console.log(error);
-      showAlertMessage("danger", "Something went wrong!");
+      showAlertMessage("error", "Something went wrong!");
     }
   };
   return (

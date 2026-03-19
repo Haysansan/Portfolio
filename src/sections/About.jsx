@@ -1,5 +1,5 @@
 import { Briefcase, Code, User } from "lucide-react"
-import resumePdf from "/assets/pdf/Setha_Vathanak-Resume.pdf";
+import resumePdf from "/assets/pdf/Eang_Haysan-Resume.pdf";
 
 export const About = () => {
     return (
@@ -13,7 +13,7 @@ export const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
                     <h3 className="text-2xl font-semibold">
-                        Passionate WebDeveloper & Learner
+                        Passionate Web Developer & Tech Explorer
                     </h3>
 
                     <p className="text-muted-foreground">
@@ -21,7 +21,7 @@ export const About = () => {
                     </p>
 
                     <p className="text-muted-foreground">
-                        I am detail-oriented, highly motivated to improve my skills, and eager to gain hands-on experience in a real-world development environment.
+                        I am an enthusiastic learner, highly motivated to improve my skills, and eager to gain hands-on experience in a real-world development environment.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start items-center">
@@ -30,7 +30,7 @@ export const About = () => {
                             Get In Touch
                         </a>
 
-                        <a href={resumePdf} download="Setha_Vathanak-Resume.pdf" className="px-6 py-2 rounded-full border border-lavender text-white hover:bg-lavender transition-colors duration-300">
+                        <a href={resumePdf} download="Eang_Haysan-Resume.pdf" className="px-6 py-2 rounded-full border border-lavender text-white hover:bg-lavender transition-colors duration-300">
                             Download CV
                         </a>
                     </div>

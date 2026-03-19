@@ -15,7 +15,7 @@ const Footer = () => {
           </a>
         ))}
       </div>
-      <p>© 2026 Nak. All rights reserved.</p>
+      <p>© 2026 San. All rights reserved.</p>
     </section>
   );
 };
