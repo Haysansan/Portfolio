@@ -3,39 +3,39 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "MhobFinder 🥙",
-    description: "MhobFinder is a web-based platform that helps users find recipes using the ingredients they already have at home. It simplifies meal planning, promotes healthier cooking, and reduces food waste.",
+    title: "Derleng Website",
+    description: "Derleng is a full-stack web-based tourism platform designed to help travelers discover destinations, plan trips efficiently, and access localized services in Cambodia.",
     image: "/projects/mhohfinder.jpg",
-    tags: ["ReactJS", "JavaScript", "Node", "Express", "MySQL", "Firebase"],
+    tags: ["ReactJS", "JavaScript", "Node", "Express", "MySQL", "CSS", "HTML"],
     demoUrl: "#",
-    githubUrl: "https://github.com/obviouslynotdim/MhobFinder",
+    githubUrl: "https://github.com/Undertale-12357/DerLeng-Web-application-platform",
   },
   {
     id: 2,
-    title: "Friend Media ",
-    description: "This is a Flask-based web application that allows users to register, manage accounts, and store Friend Profiles, with user authentication, profile image handling, and a relational database linking profiles to users.",
+    title: "MealMirror ",
+    description: "MealMirror is a Flutter app for tracking meals and basic nutrition with a playful “pet” companion theme. This README now reflects the current project layout in the workspace.",
     image: "/projects/friendpython.png",
-    tags: ["Python", "Flask", "SQLite", "Flask-Authentication", "Bootstrap"],
+    tags: ["Dart", "Flutter", "C", "C++", "Swift", "Java", "HTML", "CSS", "JavaScript"],
     demoUrl: "#",
-    githubUrl: "https://github.com/obviouslynotdim/friendmedia-miniproject",
+    githubUrl: "https://github.com/Haysansan/MealMirror",
   },
   {
     id: 3,
-    title: "Friend Store 🚀",
-    description: "Features full CRUD functionality, follows best development practices, and is deployed on Render. It includes a responsive design, modern UI components, and light/dark mode support for a better user experience.",
+    title: "McDonald Clone School Project",
+    description: "The purpose of this project was to replicate the design and functionality of the Official McDonald’s Website, with a strong focus on User Interface (UI) design.",
     image: "/projects/flaskjsonweb.png",
-    tags: ["Python", "React", "SQlite", "SQLAlchemy", "Flask", "ChakraUI"],
+    tags: ["HTML", "CSS", "JavaScript", "JSON"],
     demoUrl: "#",
-    githubUrl: "https://github.com/obviouslynotdim/webapp-flask-json",
+    githubUrl: "https://github.com/RaksaOC/McDonald-Clone",
   },
   {
     id: 4,
-    title: "MedicTrack 💊",
-    description: "Mobile Application that helps users remember to take their medication by setting pill reminders and receiving real-time notifications",
+    title: "Venue Booking System",
+    description: "The venue booking system is a middleman system between hall owner and customers. It allows owners to showcase their venues, making them easily accessible to a wider audience.",
     image: "/projects/medictrack.png",
-    tags: ["Flutter", "Dart", "C++", "SQLite"],
+    tags: ["HTML", "CSS", "JavaScript"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/KuyPoly/Venue_booking",
   },
   {
     id: 5,
@@ -48,12 +48,12 @@ const projects = [
   },
   {
     id: 6,
-    title: "Ecommerce For Clothing",
-    description: "My First Web Development Project using HTML CSS, a simple webshop for clothing. It features a clean design, product listings, and basic shopping cart functionality.",
+    title: "E-Learning Management System",
+    description: "My First System Development Project E-Learning Management System is a system design for students to study any course through electronic means. In this project we will implement three main functions which are student, teacher, and admin.",
     image: "/projects/webshop.png",
     tags: ["HTML", "CSS"],
-    demoUrl: "https://teedeployment-test.vercel.app/",
-    githubUrl: "https://github.com/obviouslynotdim/teedeployment-test",
+    demoUrl: "#",
+    githubUrl: "https://github.com/KuyPoly/E-Learning-Management-System",
   },
 ];
 
@@ -67,7 +67,7 @@ export const Project = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some ofmy recent projects. Each project was crafted with
+          Here are some of my recent projects. Each project was crafted with
           attention to detail, performance, user experience.
         </p>
 
@@ -122,7 +122,7 @@ export const Project = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a href="https://github.com/obviouslynotdim" target="_blank" className="cosmic-button w-fit flex items-center mx-auto gap-2">
+          <a href="https://github.com/Haysansan" target="_blank" className="cosmic-button w-fit flex items-center mx-auto gap-2">
             Check My Github <ArrowRight size={16}/>
           </a>
         </div>
