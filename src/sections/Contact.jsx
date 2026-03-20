@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particals";
@@ -13,6 +13,11 @@ const Contact = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState("success");
   const [alertMessage, setAlertMessage] = useState("");
+
+  // Initialize EmailJS on component mount
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -29,37 +34,27 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      console.log("From submitted:", formData);
-      // await emailjs.send(
-      //   import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      //   import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      //   {
-      //     from_name: formData.name,
-      //     name: formData.name,
-      //     to_name: "Eang Haysan",
-      //   //   from_email: formData.email,
-      //     reply_to: formData.email,
-      //     message: formData.message,
-      //   },
-      //   import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-      // );
-      await emailjs.send(
+      console.log("Form submitted:", formData);
+      const response = await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           user_name: formData.name,
           user_email: formData.email,
           message: formData.message,
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        }
       );
+      
+      console.log("Email sent successfully:", response);
       setIsLoading(false);
       setFormData({ name: "", email: "", message: "" });
       showAlertMessage("success", "Your message has been sent successfully!");
     } catch (error) {
       setIsLoading(false);
-      console.log(error);
-      showAlertMessage("error", "Something went wrong!");
+      console.error("EmailJS Error:", error);
+      console.error("Error status:", error.status);
+      console.error("Error text:", error.text);
+      showAlertMessage("error", `Something went wrong! Error: ${error.text || error.message}`);
     }
   };
   return (
