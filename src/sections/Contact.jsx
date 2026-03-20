@@ -51,10 +51,15 @@ const Contact = () => {
       showAlertMessage("success", "Your message has been sent successfully!");
     } catch (error) {
       setIsLoading(false);
-      console.error("EmailJS Error:", error);
+      console.error("Full Error Object:", error);
+      console.error("Error keys:", Object.keys(error));
       console.error("Error status:", error.status);
       console.error("Error text:", error.text);
-      showAlertMessage("error", `Something went wrong! Error: ${error.text || error.message}`);
+      console.error("Error message:", error.message);
+      console.error("Error toString:", error.toString());
+      
+      const errorMessage = error.text || error.message || error.toString() || "Unknown error occurred";
+      showAlertMessage("error", `Something went wrong! Error: ${errorMessage}`);
     }
   };
   return (
