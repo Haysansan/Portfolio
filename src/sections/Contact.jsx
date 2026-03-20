@@ -16,7 +16,17 @@ const Contact = () => {
 
   // Initialize EmailJS on component mount
   useEffect(() => {
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    
+    if (!publicKey) {
+      console.error("❌ VITE_EMAILJS_PUBLIC_KEY is not defined!");
+      console.error("Available env vars:", Object.keys(import.meta.env).filter(key => key.includes('VITE')));
+      showAlertMessage("error", "Email service is not configured. Please restart the dev server.");
+      return;
+    }
+    
+    console.log("✅ Initializing EmailJS with public key");
+    emailjs.init(publicKey);
   }, []);
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
